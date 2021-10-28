@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair%20Display" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="mklogo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'images/mklogo.png'%}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,14 +23,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <meta name="google-site-verification" content="iEKFN3Db9oCK1iLEgrYp7HiHQ4lfAbZ-LW4o7yGXcDg" />
 
 </head>
 <body class="main"  style="background-color: #0f0e0c;" > 
     <header>
         <nav class="navbar navbar-expand-sm navbar-dark topnav sticky-top">
-            <a class="navbar-brand"> <img src="mklogo.png" alt="logo" style="height:40px; width:40px;"> MeiKai </a>
+            <a class="navbar-brand"> <img src="{%static 'images/mklogo.png'%}" alt="logo" style="height:40px; width:40px;"> MeiKai </a>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="topnav">
                     <li><a href="index.html" button  data-toggle="tooltip" title="Menu">Home</a></li>
@@ -48,20 +48,20 @@
     
     <div class="container">
         <div class= "gallery"> 
-            <img src= "men1.jpg">
+            <img src= "{%static 'images/men1.jpg'%}">
             <div class=" descr"> 
                 <button class="tshirt" type="button" data-toggle="tooltip" title = "T-SHIRT">T-SHIRT</T-SHIRT></button>
                 <a href="forhim.html"></a>
             </div>
         </div>
         <div class= "gallery"> 
-            <img src= "men3.png">
+            <img src= "{%static 'images/men3.png'%}">
             <div class=" descr"> 
                 <button class="tshirt" type="button" data-toggle="tooltip" title = "T-SHIRT">SWEATER</T-SHIRTS></button>
             </div>
         </div>
         <div class= "gallery"> 
-            <img src= "men2.jpg"> 
+            <img src= "{%static 'images/men2.jpg'%}"> 
             <div class=" descr"> 
                 <button class="tshirt" type="button" data-toggle="tooltip" title = "T-SHIRT">HOODIES</T-SHIRT></button>
                 

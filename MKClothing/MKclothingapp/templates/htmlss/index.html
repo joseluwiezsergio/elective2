@@ -23,7 +23,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <meta name="google-site-verification" content="iEKFN3Db9oCK1iLEgrYp7HiHQ4lfAbZ-LW4o7yGXcDg" />
 
 </head>
@@ -31,7 +31,7 @@
 <body class="main"  style="background-image: linear-gradient(to right, #1A1A1A, #202020);"> 
     <header>
     <nav class="navbar navbar-expand-sm navbar-dark topnav sticky-top">
-        <a class="navbar-brand"> <img src="mklogo.png" alt="logo" style="height:40px; width:40px;"> MeiKai </a>
+        <a class="navbar-brand"> <img src=" {%static 'images/mklogo.png'%}" alt="logo" style="height:40px; width:40px;"> MeiKai </a>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="topnav">
                 <li><button  data-toggle="tooltip" title="Menu">Home</button></li>
