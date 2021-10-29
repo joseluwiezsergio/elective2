@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} {% endblock %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair%20Display" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="{%static 'images/mklogo.png'%}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <meta name="google-site-verification" content="iEKFN3Db9oCK1iLEgrYp7HiHQ4lfAbZ-LW4o7yGXcDg" />
+
+</head>
+
+<body class="main"  style="background-image: linear-gradient(to right, #1A1A1A, #202020);">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark topnav sticky-top">
+            <a class="navbar-brand"> <img src=" {%static 'images/mklogo.png'%}" alt="logo" style="height:40px; width:40px;"> MeiKai </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="topnav">
+                    <li><a href="http://127.0.0.1:8000/" data-toggle="tooltip" title="Menu">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/productpage/" data-toggle="tooltip" title="Shop">Shop</a></li>
+                    <!-- <li><button  data-toggle="tooltip" title="About">Info</button></li> -->
+                </ul>
+           </div>
+           <a href="http://127.0.0.1:8000/login/" class="order-btn"  type="button" data-toggle="tooltip" title="Log in">   <i class="fa fa-user-circle-o"></i></a>
+           <button class="order-btn"  type="button" data-toggle="tooltip" title="Cart">  <i class="fa fa-shopping-cart"></i></button>
+    
+         </nav>
+        </header>
+        {% block content %} {% endblock %}
+
+
+        <div class="page">
+            <ul class="leftnav">
+               <li><a href="http://127.0.0.1:8000/productpage/"><button  data-toggle="tooltip" title="Her">Clothes for Her</button></a></li>
+               <li><a href="http://127.0.0.1:8000/forhim/"><button  data-toggle="tooltip" title="Him">Clothes for Him</button></a></li>
+               <li><a href="http://127.0.0.1:8000/Allproducts/"><button  data-toggle="tooltip" title="All">All Products</button></a> </li>
+           </ul>
+        </div>
+        {% block navigate %} {% endblock %}
+</body>
+</html>
