@@ -77,8 +77,10 @@
 
     <section class=" p-5">
       
+      <a  class="btn btn-outline-dark" href="{% url 'shop' %}">&#x2190; Shop</a>
       <a  style="float:right; margin:5px;" class="btn btn-danger" href="{% url 'logout' %}" >Log out</a>
         <h1 class="pb-2">Inventory</h1>
+        <a style=" font-size:20px;">Hello, {{request.user}}</a>
         <div class="table" id="more-tables">
             <table class="table table-light table-striped">
               <thead class="text-dark">
@@ -98,9 +100,9 @@
                         <td data-label="Stocks">{{data.stocks}}</td>
                         <td>
                           <a href="{% url 'edit' data.id %}"  class="btn btn-success" data-toggle="tooltip" title="Edit" ><i class="fa fa-edit"></i></a>
-                        <a href="{% url 'del' data.id %}" type="button" class="btn btn-danger" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>
+                          <a href="{% url 'del' data.id %}" type="button" class="btn btn-danger" data-toggle="tooltip" title="Delete"><i class="fa fa-trash"></i></a>
                         </td>
-                        </td>
+                        
                             
                       </tr>
                     {% endfor %}
@@ -115,11 +117,11 @@
                 <div class="container1 mb-lg-2">
                   <h2 class="text-center pt-lg-2"></h2>
                     <div class="row text-center">
-                      <div class="col-lg">
-                        <a  href="{% url 'adminchangepass' %}" type="submit" class="btn btn-dark btn-lg" >Change Admin Password</a>
+                      <div class="col-lg ">
+                        <a href="{% url 'adminreg' %}"  type="submit" class="btn btn-dark btn-lg">Create Admin Account</a>
                       </div>
                       <div class="col-lg ">
-                        <a href="{% url 'history' %}"  type="submit" class="btn btn-dark btn-lg"> Transaction History</a>
+                        <a href="{% url 'history' %}"  type="submit" class="btn btn-dark btn-lg">Order list</a>
                       </div>
                       <div class="col-lg ">
                         <a href="{% url 'addingform' %}" type="submit" class="btn btn-dark btn-lg">Add Item</a>

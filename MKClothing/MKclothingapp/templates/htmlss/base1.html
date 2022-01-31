@@ -37,9 +37,9 @@
             <a class="navbar-brand"> <img src=" {%static 'images/mklogo.png'%}" alt="logo" id="tsize"  style="height:50px; width:50px;"><b> MeiKai</b></a>
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
            </div>
-           <li class="topnav"><a href="{% url 'shop' %}" data-toggle="tooltip" id="tsize" title="Shop"><strong>Shop</strong></a></li>
-           <li class="topnav"><a href="{% url 'adminlogin' %}" data-toggle="tooltip" id="tsize" title="Admin"><strong>Admin</strong></a></li>
-           <li class="topnav"><a href="{% url 'cart' %}"   type="button" id="tsize" data-toggle="tooltip" title="Cart">  <i class="fa fa-shopping-cart"></i></a></li>
+         
+           <li class="topnav"><a href="{% url 'adminlogin' %}"  type="button" id="tsize" data-toggle="tooltip" title="Login">  <i class="fa fa-user-circle"></i></a></li>
+          
          </nav>
         </header>
         {% block content %} {% endblock %}

@@ -1,8 +1,8 @@
 from django import forms
 from .models import Products
+from .models import orderc
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
 
 class ProductForm(forms.ModelForm):
     class Meta :
@@ -17,7 +17,6 @@ class EditProductForm(forms.ModelForm):
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['username', 'password1', 'password2']
+        fields = ['username','password1', 'password2']
 
-        
         
