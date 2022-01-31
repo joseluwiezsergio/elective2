@@ -11,6 +11,16 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
+def check():
+  check = orderc.objects.values_list('cancel', flat = True)
+  var = len(check)
+
+  if var == 0: 
+    s = orderc(id = 1, cancel = 0, success = 0)
+    s.save()
+  else:
+    return 
+
 def complete_order(request,i_id):
   chisto = History.objects.get(id=i_id)
   cprod = Products.objects.get(itemname=chisto.pname)
@@ -36,17 +46,14 @@ def complete_order(request,i_id):
     
       return redirect('history')
 
-  
- 
-
 
 def cancel_order(request,i_id):
   chisto = History.objects.get(id=i_id)
   cprod = Products.objects.get(itemname=chisto.pname)
   var = orderc.objects.get(id=1)
 
-  plus = var.cancels + 1
-  var.cancels = plus
+  plus = var.cancel + 1
+  var.cancel = plus
   var.save()
 
   updatedstock = cprod.stocks + chisto.quan
@@ -74,6 +81,7 @@ def defadminreg(request):
     return render(request,"htmlss/adminreg.html", context)
 
 def defshop(request):
+    check()
     pd = Products.objects.all()
     context = {
       'pd': pd
@@ -182,10 +190,10 @@ def defhistory(request):
   histo = History.objects.all()
   var = orderc.objects.get(id=1)
 
-  totalprocessed = var.success + var.cancels
+  totalprocessed = var.success + var.cancel
 
   data = {
-    'histo': histo, 'var' : var, 'totalprocessed' : totalprocessed
+    'histo': histo,'var' : var, 'totalprocessed' : totalprocessed
   }
   return render(request,"htmlss/history.html", data)
 

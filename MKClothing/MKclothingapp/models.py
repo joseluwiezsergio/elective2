@@ -19,6 +19,6 @@ class History(models.Model):
     address = models.CharField(max_length=100)
 
 class orderc(models.Model):
-    success =models.IntegerField(default=0)
-    cancels = models.IntegerField(default=0)
+    cancel = models.IntegerField(default=0)
+    success = models.IntegerField(default=0)
     
