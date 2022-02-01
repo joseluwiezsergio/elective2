@@ -35,7 +35,7 @@ def complete_order(request,i_id):
       return redirect('history')
   else:
   
-      var = 'Hi ' + chisto.name + "! \n \nThis is to inform you that your that your order has been confirmed and is on it's way. Please prepare exact amount of PHP " + str(chisto.total) + '. \n \n Order Details:  \n   Product name: ' + chisto.pname +  ' \n   Quantity: ' + str(chisto.quan) + ' \n   Address: ' + chisto.address +  '\n \n Thank you! \n Meikai'
+      var = 'Hi ' + chisto.name + "! \n \nThis is to inform you that your order has been confirmed and is on it's way. Please prepare exact amount of PHP " + str(chisto.total) + '. \n \n Order Details:  \n   Product name: ' + chisto.pname +  ' \n   Quantity: ' + str(chisto.quan) + ' \n   Address: ' + chisto.address +  '\n \n Thank you! \n Meikai'
 
       subject = 'ORDER CONFIRMATION'
       message = var
